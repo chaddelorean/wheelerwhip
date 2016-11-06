@@ -1,0 +1,6 @@
+[21-Dec-2009 18:41:44] PHP Parse error:  syntax error, unexpected T_ENCAPSED_AND_WHITESPACE, expecting T_STRING or T_VARIABLE or T_NUM_STRING in /home/wheeler1/public_html/mail.php on line 4
+[21-Dec-2009 18:47:16] PHP Parse error:  syntax error, unexpected T_VARIABLE in /home/wheeler1/public_html/mail.php on line 10
+[21-Dec-2009 18:49:26] PHP Fatal error:  Cannot use [] for reading in /home/wheeler1/public_html/mail.php on line 6
+[21-Dec-2009 19:00:37] PHP Parse error:  syntax error, unexpected ';' in /home/wheeler1/public_html/mail.php on line 6
+[21-Dec-2009 19:00:50] PHP Fatal error:  Function name must be a string in /home/wheeler1/public_html/mail.php on line 6
+[21-Dec-2009 19:34:54] PHP Parse error:  syntax error, unexpected T_VARIABLE in /home/wheeler1/public_html/dealerMail.php on line 5

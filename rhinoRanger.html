@@ -1,0 +1,287 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" href="flyout.css" type="text/css" />
+<link rel="stylesheet" href="http://www.wheelerwhip.com/css/wheelerwhipStyles.css" type="text/css" />
+<script type="text/javascript" src="flyout.js"></script>
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.8.2.custom.min.js"></script>
+<script type="text/javascript" src="js/jquery.cookie.js"></script>
+<script type="text/javascript" src="js/jquery.json.js"></script>
+<script type="text/javascript" src="js/shoppingCart.js"></script>
+<link type="text/css" href="css/custom-theme/jquery-ui-1.8.2.custom.css" rel="stylesheet" />
+<style>
+#accordion {
+  position: absolute;
+  top: 115px;
+  right: 0px;
+  /* just used to show how to include the margin in the effect */
+  margin-top: 20px;
+  padding-top: 19px;
+}
+#accordion.fixed {
+  position: fixed;
+  top: 0;
+}
+.pointer {
+	cursor:pointer;
+}
+.alternatingRowColor {
+	background-color:#E1E1E1;
+}
+.checkListItem {
+	color:#666666;
+	font-size:14px;
+	padding-left:4px;
+}
+.stubLineItem {
+	color:#2E6E9E;
+	font-weight:bold;
+}
+</style>
+<style>
+  .pointer{cursor:pointer;}
+  .alternatingRowColor{background-color:#E1E1E1;}
+  .checkListItem{color:#666666; font-size:14px; padding-left:4px;}
+  .stubLineItem{color:#2E6E9E;font-weight:bold;}
+</style>
+ <!--[if IE]> 
+ <style>
+   #accordion {
+	  background-color:#00F;
+	  color:#FFF;
+      border:1px;
+	  border-color : 000;
+   } 
+   #cartContents{
+   	  color:#FFF;
+	  background-color:#000;
+   }
+   
+   #copycart{
+   	  color:#FFF;
+	  background-color:#000;
+   }    
+ 
+ </style>
+ <![endif]--> 
+<title>Wheelerwhip - Rhino Ranger Flag Holders</title>
+</head>
+<body background="http://www.wheelerwhip.com/images/bg.jpg">
+<table width="800px">
+  <tr>
+            <td width="100px" height="300" valign="top"><div id="wrapper">
+
+        <div id="leftcolumn">
+
+          <dl class="dropdown">
+
+            <dt id="one-ddheader" class="upperdd" onmouseover="ddMenu('one',1)" onmouseout="ddMenu('one',-1)">Flags</dt>
+
+            <dd id="one-ddcontent" onmouseover="cancelHide('one')" onmouseout="ddMenu('one',-1)">
+
+              <ul>
+
+                <li><a href="http://www.wheelerwhip.com/safetyFlags.html" class="underline">Whip/Safety Flags</a></li>
+
+                <li><a href="http://www.wheelerwhip.com/specialtyFlags.html" class="underline">Specialty Flags</a></li>
+
+                <li><a href="http://www.wheelerwhip.com/3x5specialtyFlags.html" class="underline">3' x 5' Flags</a></li>
+
+                <li><a href="http://www.wheelerwhip.com/boatFlag.html" class="underline">Boat Flags</a></li>
+
+              </ul>
+
+            </dd>
+
+          </dl>
+
+		  
+
+		  <dl class="dropdown">
+
+            <dt id="two-ddheader" class="upperdd" onmouseover="ddMenu('two',1)" onmouseout="ddMenu('two',-1)">Flag Holders/Mounts</dt>
+
+            <dd id="two-ddcontent" onmouseover="cancelHide('two')" onmouseout="ddMenu('two',-1)">
+
+              <ul>
+
+                <li><a href="http://www.wheelerwhip.com/flagHolders.html" class="underline">ATV Holders</a></li>
+
+                <li><a href="http://www.wheelerwhip.com/motorcycleFlagHolders.html" class="underline">Motorcycle Holders</a></li>
+
+                <li><a href="http://www.wheelerwhip.com/rhinoRanger.html" class="underline">UTV Holders</a></li>
+
+                <li><a href="http://www.wheelerwhip.com/bicycleHolders.html" class="underline">Bicycle Holders</a></li>
+
+				<li><a href="http://www.wheelerwhip.com/barGripper.html" class="underline">Bar Gripper</a></li>
+
+              </ul>
+
+            </dd>
+
+          </dl>
+
+
+
+		  <dl class="dropdown">
+
+            <dt id="four-ddheader" class="upperdd" onclick="window.location.href='http://www.wheelerwhip.com/orderOnline.html'">Order Online</dt>
+
+            
+
+          </dl>
+
+		  <dl class="dropdown">
+
+            <dt id="four-ddheader" class="upperdd" onclick="window.location.href='http://www.wheelerwhip.com'">Home</dt>
+
+          
+
+          </dl>
+
+		  <dl class="dropdown">
+
+            <dt id="five-ddheader" class="upperdd" onmouseover="ddMenu('five',1)" onmouseout="ddMenu('five',-1)">Contact US</dt>
+
+            <dd id="five-ddcontent" onmouseover="cancelHide('five')" onmouseout="ddMenu('five',-1)">
+
+              <ul>
+
+                <li><a href="http://www.wheelerwhip.com/contactUs.html" class="underline">Contact Us</a></li>
+
+                <li><a href="http://www.wheelerwhip.com/dealerContactUs.html" class="underline">Dealer Contact Us</a></li>
+
+              </ul>
+
+            </dd>
+
+          </dl>
+
+        </div>
+
+      </div></td>
+    <td width="600px">
+<table width="600" border="0"  align="center" class="">
+<tr>
+    <td colspan="3"><img src="images/wheelerwhip.jpg" alt="Wheelerwhip.com" width="800" height="120" /></td>
+  </tr>
+  <tr>
+
+    <td colspan="2"class="colorWhite textHeadingLarge">&nbsp;</td>
+  </tr>
+  <tr>
+    <td colspan="2" class="textPeripheralTitleMajor colorRed">Rhino, Ranger, Razor, Side by Side Flag Mounts </td>
+  </tr>
+  <tr class="borderFull borderColorDarkGrey">
+    <td width="365" valign="top" class="textPeripheralTitleMinor colorWhite">Side By Side:<br /><br /> <img align="top" src="images/sideBySides/UTVHolder.jpg" alt="wheelerwhip original atv flag holder"width="200"/> <img align="top" src="images/sideBySides/rhinoFlag.jpg" alt="wheelerwhip original atv flag holder" height="210"/><br /><br />
+        <ul class="colorLightGrey textHeadingLarge">
+          <b>
+          <li>Clamps to any 1 3/4&quot; round bar </li>
+            <li>Colors: Silver, Black </li>
+          </b>
+      </ul></td>
+    <td width="325" valign="center" class="textHeadingLarge colorWhite borderFull borderColorDarkGrey"><ul>
+      <b>
+        <li>Made from high grade aluminum.</li>
+        <li>They are anodized for color, brilliance, and durability.</li>
+        <li>Easy to install!</li>
+        <li>Simple to use and durable.</li>
+        </b>
+    </ul></td>
+  </tr>
+  <tr>
+  <td colspan="2" width="320" align="left" class="textHeadingLargeAllCaps colorWhite  borderColorDarkGrey"><table width="320" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td width="160" align="right" valign="top" style="margin-top:4px"class="textHeadingLargeAllCaps colorWhite  borderColorDarkGrey"><p>Color:</p></td>
+                      <td width="160" align="center" class="textHeadingLargeAllCaps colorWhite  borderColorDarkGrey"><p align="right">
+                          <select name="12-1" id="12-1id" style="width:150px;font:9px;margin-top:4px">
+                            <option value="Black">Black $28.00</option>
+                            <option value="Silver">Silver $28.00</option>
+                          </select>
+                                                    <br />
+                          <input name="12" value="Add to Cart" item="Utv Flag Holder" type="button" align="middle" style="cursor:pointer; border: 1px solid rgb(204, 204, 204); margin-top: 8px; font-size: 12px; height: 20px; width: 80px;" class="ui-helper-reset ui-state-default ui-corner-all" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td width="160" align="center" class="textHeadingLargeAllCaps colorWhite  borderColorDarkGrey">&nbsp;</td>
+                      <td width="160" align="center" class="textHeadingLargeAllCaps colorWhite  borderColorDarkGrey">&nbsp;</td>
+                    </tr>
+                  </table></td>
+  </tr>
+  <tr>
+    <td width="325" valign="top" class="textPeripheralTitleMinor colorWhite">&nbsp;</td>
+  </tr>
+  <tr>
+    <td colspan="2" class="colorWhite textHeadingLarge"><p>This flag mount is designed to clamp on the verticle bars of any 1 3/4&quot; roll bar and comes with a 1/2&quot; hole for mounting your desired Wheelerwhip safety whip flag.</p>
+      <p>When installing, find a good place to install your flag on any verticle 1 3/4&quot; bar. Unbolt the mount and reassemble it around the the bar. Tighten the bolts firmly. Install your Wheelerwhip quick release flag mount or your bolt flag, and your  ready to go. (Allen head wrench is included for mounting)  </p></td>
+  </tr>
+     <tr>
+  	<td><br /></td>
+  </tr>
+  <tr>
+  	<td colspan="2"class=" borderBottom borderColorDarkGrey"></td>
+  </tr>
+  <tr>
+  	<td><br /></td>
+  </tr>
+  <tr>
+    <td width="325"  colspan="2"valign="top" class="textPeripheralTitleMinor colorWhite"><p class="style4">&nbsp;</p>
+    </td>
+  </tr>
+
+   <tr>
+    <td align="center" colspan="2"class="textHeadingLargeAllCaps borderFull borderColorDarkGrey colorLightGrey">All Rights Reserved Wheelerwhip.com<br>
+	Email Contact@wheelerwhip.com<br />
+      Phone (801)785-4710<br> 
+    Fax (801)785-5687<br></td>
+ </tr>
+    </table>
+    </td>
+  </tr>
+</table>
+<div id="accordion" style="width:320px;  opacity:0.8; filter:alpha(opacity=80)" class="">
+	<h3><a>Shopping Cart(click here to minimize)</a></h3>
+	<div>
+      <div id="cartContents">
+        <table width="265" border="0" style=" font-size:11px">
+          <tr>
+            <td width="185" align="center" class="ui-widget-header">ITEM</td>
+            <td width="" align="center" class="ui-widget-header">QTY</td>
+            <td width="" align="center" class="ui-widget-header">PRICE</td>
+          </tr>
+          <tr>
+            <td width="175" align="left">CART IS EMPTY</td>
+            <td width="25" align="right"></td>
+            <td width="" align="right"></td>
+          </tr>
+        </table>
+        </div>
+<div id="testdiv"></div>
+        <div id="copycart">
+          <form id="testForm" method="post" action="https://www.paypal.com/cgi-bin/webscr">
+          <input type="hidden" name="currency_code" value="USD" />
+          <input type="hidden" name="upload" value="1" />
+          <input type="hidden" name="cmd" value="_cart" />
+          <input type="hidden" name="business" value="contact@wheelerwhip.com" />
+          <input type="button" name="checkout" value="Checkout" style=" cursor:pointer; border: 1px solid rgb(204, 204, 204); margin-top: 8px; font-size: 12px; height: 20px; width: 100px;" class="ui-helper-reset ui-state-default ui-corner-all"/><input name="editCart" value="Edit Cart" type="button" align="middle" style="cursor:pointer; border: 1px solid rgb(204, 204, 204); margin-top: 8px; font-size: 12px; height: 20px; width: 80px;" class="ui-helper-reset ui-state-default ui-corner-all" />
+          <input type="hidden" name="amount_1" value="10" />
+          </form>
+        </div>
+      </div>
+	</div>
+  </div>
+
+
+
+<div id="dialog" title="CART CONTENTS">
+  <div class="ui-widget" id="loginErrorContainer">
+    <div class="ui-state-default ui-corner-all" style="padding: 0pt 0.7em;"></div>
+    <div class="ui-widget" id="message">MESSAGE GOES HERE<br>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

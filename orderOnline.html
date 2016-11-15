@@ -3,19 +3,20 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <link rel="stylesheet" href="flyout.css" type="text/css" />
-<link rel="stylesheet" href="http://www.wheelerwhip.com/css/wheelerwhipStyles.css" type="text/css" />
+<link rel="stylesheet" href="css/wheelerwhipStyles.css" type="text/css" />
 <script type="text/javascript" src="flyout.js"></script>
 <script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
 <script type="text/javascript" src="js/jquery-ui-1.8.2.custom.min.js"></script>
 <script type="text/javascript" src="js/jquery.cookie.js"></script>
 <script type="text/javascript" src="js/jquery.json.js"></script>
 <script type="text/javascript" src="js/shoppingCart.js"></script>
+<script src="http://www.w3schools.com/lib/w3data.js"></script>
 <link type="text/css" href="css/custom-theme/jquery-ui-1.8.2.custom.css" rel="stylesheet" />
 <style>
 #accordion {
   position: absolute;
   top: 115px;
-  right: 0px;
+  right: 20px;
   /* just used to show how to include the margin in the effect */
   margin-top: 20px;
   padding-top: 19px;
@@ -68,7 +69,7 @@
  <![endif]--> 
 <title>Wheelerwhip - Order test</title>
 </head>
-<body background="http://www.wheelerwhip.com/images/bg.jpg">
+<body background="images/bg.jpg">
 <table width="800px">
   <tr>
     <td width="100px" height="300" valign="top"><div id="wrapper">
@@ -77,10 +78,10 @@
             <dt id="one-ddheader" class="upperdd" onmouseover="ddMenu('one',1)" onmouseout="ddMenu('one',-1)">Flags</dt>
             <dd id="one-ddcontent" onmouseover="cancelHide('one')" onmouseout="ddMenu('one',-1)">
               <ul>
-                <li><a href="http://www.wheelerwhip.com/safetyFlags.html" class="underline">Whip/Safety Flags</a></li>
-                <li><a href="http://www.wheelerwhip.com/specialtyFlags.html" class="underline">Specialty Flags</a></li>
-                <li><a href="http://www.wheelerwhip.com/3x5specialtyFlags.html" class="underline">3' x 5' Flags</a></li>
-                <li><a href="http://www.wheelerwhip.com/boatFlag.html" class="underline">Boat Flags</a></li>
+                <li><a href="safetyFlags.html" class="underline">Whip/Safety Flags</a></li>
+                <li><a href="specialtyFlags.html" class="underline">Specialty Flags</a></li>
+                <li><a href="3x5specialtyFlags.html" class="underline">3' x 5' Flags</a></li>
+                <li><a href="boatFlag.html" class="underline">Boat Flags</a></li>
               </ul>
             </dd>
           </dl>
@@ -88,16 +89,16 @@
             <dt id="two-ddheader" class="upperdd" onmouseover="ddMenu('two',1)" onmouseout="ddMenu('two',-1)">Flag Holders/Mounts</dt>
             <dd id="two-ddcontent" onmouseover="cancelHide('two')" onmouseout="ddMenu('two',-1)">
               <ul>
-                <li><a href="http://www.wheelerwhip.com/flagHolders.html" class="underline">ATV Holders</a></li>
-                <li><a href="http://www.wheelerwhip.com/motorcycleFlagHolders.html" class="underline">Motorcycle Holders</a></li>
-                <li><a href="http://www.wheelerwhip.com/rhinoRanger.html" class="underline">UTV Holders</a></li>
-                <li><a href="http://www.wheelerwhip.com/bicycleHolders.html" class="underline">Bicycle Holders</a></li>
-                <li><a href="http://www.wheelerwhip.com/barGripper.html" class="underline">Bar Gripper</a></li>
+                <li><a href="flagHolders.html" class="underline">ATV Holders</a></li>
+                <li><a href="motorcycleFlagHolders.html" class="underline">Motorcycle Holders</a></li>
+                <li><a href="rhinoRanger.html" class="underline">UTV Holders</a></li>
+                <li><a href="bicycleHolders.html" class="underline">Bicycle Holders</a></li>
+                <li><a href="barGripper.html" class="underline">Bar Gripper</a></li>
               </ul>
             </dd>
           </dl>
           <dl class="dropdown">
-            <dt id="four-ddheader" class="upperdd" onclick="window.location.href='http://www.wheelerwhip.com/orderOnline.html'">Order Online</dt>
+            <dt id="four-ddheader" class="upperdd" onclick="window.location.href='orderOnline.html'">Order Online</dt>
           </dl>
           <dl class="dropdown">
             <dt id="four-ddheader" class="upperdd" onclick="window.location.href='http://www.wheelerwhip.com'">Home</dt>
@@ -106,14 +107,14 @@
             <dt id="five-ddheader" class="upperdd" onmouseover="ddMenu('five',1)" onmouseout="ddMenu('five',-1)">Contact US</dt>
             <dd id="five-ddcontent" onmouseover="cancelHide('five')" onmouseout="ddMenu('five',-1)">
               <ul>
-                <li><a href="http://www.wheelerwhip.com/contactUs.html" class="underline">Contact Us</a></li>
-                <li><a href="http://www.wheelerwhip.com/dealerContactUs.html" class="underline">Dealer Contact Us</a></li>
+                <li><a href="contactUs.html" class="underline">Contact Us</a></li>
+                <li><a href="dealerContactUs.html" class="underline">Dealer Contact Us</a></li>
               </ul>
             </dd>
           </dl>
         </div>
       </div></td>
-    <td width="600px"><table width="800" border="0"  align="center" class="">
+    <td width="600px"><table width="800" border="0"  align="center" class="catalogTable">
         <tr>
           <td colspan="2"><img src="images/wheelerwhip.jpg" alt="Wheelerwhip.com" width="800" height="120" /></td>
         </tr>
@@ -760,7 +761,7 @@
               </tr>
               <tr>
                 <td width="130" align="center"class="textHeadingLargeAllCaps colorWhite borderFull borderColorDarkGrey"><img src="images/safetyFlag/meshBoatFlag.png" alt="Mesh Boat Flag" width="188" /></td>
-                <td width="130" align="center"class="textHeadingLargeAllCaps colorWhite borderFull borderColorDarkGrey"><img src="http://www.wheelerwhip.com/images/safetyFlag/specialtyBoatFlag.png" alt="Orange Boat Flag" width="188"/></td>
+                <td width="130" align="center"class="textHeadingLargeAllCaps colorWhite borderFull borderColorDarkGrey"><img src="images/safetyFlag/specialtyBoatFlag.png" alt="Orange Boat Flag" width="188"/></td>
               </tr>
             </table></td>
         </tr>
@@ -941,8 +942,8 @@
                 <td width="130" align="center" class="textHeadingLargeAllCaps colorWhite borderFull borderColorDarkGrey">Bolt-On</td>
               </tr>
               <tr>
-                <td width="130" align="center"class="textHeadingLargeAllCaps colorWhite borderFull borderColorDarkGrey"><img src="http://www.wheelerwhip.com/images/motorcycleClampOn/clampOn.jpg" alt="Mesh Boat Flag" width="188" /></td>
-                <td width="130" align="center"class="textHeadingLargeAllCaps colorWhite borderFull borderColorDarkGrey"><img src="http://www.wheelerwhip.com/images/motorcycleBoltOn/motorcycleBoltOnHolder.jpg" alt="Orange Boat Flag" width="188"/></td>
+                <td width="130" align="center"class="textHeadingLargeAllCaps colorWhite borderFull borderColorDarkGrey"><img src="images/motorcycleClampOn/clampOn.jpg" alt="Mesh Boat Flag" width="188" /></td>
+                <td width="130" align="center"class="textHeadingLargeAllCaps colorWhite borderFull borderColorDarkGrey"><img src="images/motorcycleBoltOn/motorcycleBoltOnHolder.jpg" alt="Orange Boat Flag" width="188"/></td>
               </tr>
             </table></td>
         </tr>
@@ -1183,14 +1184,16 @@
               </tr>
             </table></td>
         </tr>
-        <tr>
-          <td align="center" class="textHeadingLargeAllCaps colorLightGrey">All Rights Reserved Wheelerwhip.com<br />
-            Phone (801)785-4710<br />
-            Fax (801)785-5687<br /></td>
-        </tr>
       </table></td>
   </tr>
 </table>
+
+<div w3-include-html="productfooter.html"></div>
+
+<script>
+    w3IncludeHTML();
+</script>
+
 </body>
 <div id="accordion" style="width:320px;  opacity:0.8; filter:alpha(opacity=80)" class="">
 	<h3><a>Shopping Cart(click here to minimize)</a></h3>

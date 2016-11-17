@@ -1,386 +1,385 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<link rel="stylesheet" href="flyout.css" type="text/css" />
-<link rel="stylesheet" href="http://www.wheelerwhip.com/css/wheelerwhipStyles.css" type="text/css" />
-<script type="text/javascript" src="flyout.js"></script>
-<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
-<script type="text/javascript" src="js/jquery-ui-1.8.2.custom.min.js"></script>
-<script type="text/javascript" src="js/jquery.cookie.js"></script>
-<script type="text/javascript" src="js/jquery.json.js"></script>
-<script type="text/javascript" src="js/shoppingCart.js"></script>
-<link type="text/css" href="css/custom-theme/jquery-ui-1.8.2.custom.css" rel="stylesheet" />
-<style>
-#accordion {
-  position: absolute;
-  top: 115px;
-  right: 0px;
-  /* just used to show how to include the margin in the effect */
-  margin-top: 20px;
-  padding-top: 19px;
-}
-#accordion.fixed {
-  position: fixed;
-  top: 0;
-}
-.pointer {
-	cursor:pointer;
-}
-.alternatingRowColor {
-	background-color:#E1E1E1;
-}
-.checkListItem {
-	color:#666666;
-	font-size:14px;
-	padding-left:4px;
-}
-.stubLineItem {
-	color:#2E6E9E;
-	font-weight:bold;
-}
-</style>
-<style>
-  .pointer{cursor:pointer;}
-  .alternatingRowColor{background-color:#E1E1E1;}
-  .checkListItem{color:#666666; font-size:14px; padding-left:4px;}
-  .stubLineItem{color:#2E6E9E;font-weight:bold;}
-</style>
- <!--[if IE]> 
- <style>
-   #accordion {
-	  background-color:#00F;
-	  color:#FFF;
-      border:1px;
-	  border-color : 000;
-   } 
-   #cartContents{
-   	  color:#FFF;
-	  background-color:#000;
-   }
-   
-   #copycart{
-   	  color:#FFF;
-	  background-color:#000;
-   }    
- 
- </style>
- <![endif]--> 
-<title>Wheelerwhip - 3' x 5' Specialty Flags</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="flyout.css" type="text/css" />
+  <link rel="stylesheet" href="css/wheelerwhipStyles.css" type="text/css" />
+  <script type="text/javascript" src="flyout.js"></script>
+  <script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+  <script type="text/javascript" src="js/jquery-ui-1.8.2.custom.min.js"></script>
+  <script type="text/javascript" src="js/jquery.cookie.js"></script>
+  <script type="text/javascript" src="js/jquery.json.js"></script>
+  <script type="text/javascript" src="js/shoppingCart.js"></script>
+  <script src="http://www.w3schools.com/lib/w3data.js"></script>
+  <link type="text/css" href="css/custom-theme/jquery-ui-1.8.2.custom.css" rel="stylesheet" />
+  <style>
+  #accordion {
+    position: absolute;
+    top: 115px;
+    right: 20px;
+    /* just used to show how to include the margin in the effect */
+    margin-top: 20px;
+    padding-top: 19px;
+  }
+  #accordion.fixed {
+    position: fixed;
+    top: 0;
+  }
+  .pointer {
+      cursor:pointer;
+  }
+  .alternatingRowColor {
+      background-color:#E1E1E1;
+  }
+  .checkListItem {
+      color:#666666;
+      font-size:14px;
+      padding-left:4px;
+  }
+  .stubLineItem {
+      color:#2E6E9E;
+      font-weight:bold;
+  }
+  </style>
+  <style>
+    .pointer{cursor:pointer;}
+    .alternatingRowColor{background-color:#E1E1E1;}
+    .checkListItem{color:#666666; font-size:14px; padding-left:4px;}
+    .stubLineItem{color:#2E6E9E;font-weight:bold;}
+  </style>
+   <!--[if IE]>
+   <style>
+     #accordion {
+        background-color:#00F;
+        color:#FFF;
+        border:1px;
+        border-color : 000;
+     }
+     #cartContents{
+        color:#FFF;
+        background-color:#000;
+     }
+
+     #copycart{
+        color:#FFF;
+        background-color:#000;
+     }
+
+   </style>
+   <![endif]-->
+  <title>Wheelerwhip - 3' x 5' Specialty Flags</title>
 </head>
-<body background="http://www.wheelerwhip.com/images/bg.jpg">
-<table width="800px">
-  <tr>
-        <td width="100px" height="300" valign="top"><div id="wrapper">
+<body background="images/bg.jpg">
+  <table width="800px">
+    <tr>
+          <td width="100px" height="300" valign="top"><div id="wrapper">
 
-        <div id="leftcolumn">
+          <div id="leftcolumn">
 
-          <dl class="dropdown">
+            <dl class="dropdown">
 
-            <dt id="one-ddheader" class="upperdd" onmouseover="ddMenu('one',1)" onmouseout="ddMenu('one',-1)">Flags</dt>
+              <dt id="one-ddheader" class="upperdd" onmouseover="ddMenu('one',1)" onmouseout="ddMenu('one',-1)">Flags</dt>
 
-            <dd id="one-ddcontent" onmouseover="cancelHide('one')" onmouseout="ddMenu('one',-1)">
+              <dd id="one-ddcontent" onmouseover="cancelHide('one')" onmouseout="ddMenu('one',-1)">
 
-              <ul>
+                <ul>
 
-                <li><a href="http://www.wheelerwhip.com/safetyFlags.html" class="underline">Whip/Safety Flags</a></li>
+                  <li><a href="safetyFlags.html" class="underline">Whip/Safety Flags</a></li>
 
-                <li><a href="http://www.wheelerwhip.com/specialtyFlags.html" class="underline">Specialty Flags</a></li>
+                  <li><a href="specialtyFlags.html" class="underline">Specialty Flags</a></li>
 
-                <li><a href="http://www.wheelerwhip.com/3x5specialtyFlags.html" class="underline">3' x 5' Flags</a></li>
+                  <li><a href="3x5specialtyFlags.html" class="underline">3' x 5' Flags</a></li>
 
-                <li><a href="http://www.wheelerwhip.com/boatFlag.html" class="underline">Boat Flags</a></li>
+                  <li><a href="boatFlag.html" class="underline">Boat Flags</a></li>
 
-              </ul>
+                </ul>
 
-            </dd>
+              </dd>
 
-          </dl>
-
-		  
-
-		  <dl class="dropdown">
-
-            <dt id="two-ddheader" class="upperdd" onmouseover="ddMenu('two',1)" onmouseout="ddMenu('two',-1)">Flag Holders/Mounts</dt>
-
-            <dd id="two-ddcontent" onmouseover="cancelHide('two')" onmouseout="ddMenu('two',-1)">
-
-              <ul>
-
-                <li><a href="http://www.wheelerwhip.com/flagHolders.html" class="underline">ATV Holders</a></li>
-
-                <li><a href="http://www.wheelerwhip.com/motorcycleFlagHolders.html" class="underline">Motorcycle Holders</a></li>
-
-                <li><a href="http://www.wheelerwhip.com/rhinoRanger.html" class="underline">UTV Holders</a></li>
-
-                <li><a href="http://www.wheelerwhip.com/bicycleHolders.html" class="underline">Bicycle Holders</a></li>
-
-				<li><a href="http://www.wheelerwhip.com/barGripper.html" class="underline">Bar Gripper</a></li>
-
-              </ul>
-
-            </dd>
-
-          </dl>
+            </dl>
 
 
 
-		  <dl class="dropdown">
+            <dl class="dropdown">
 
-            <dt id="four-ddheader" class="upperdd" onclick="window.location.href='http://www.wheelerwhip.com/orderOnline.html'">Order Online</dt>
+              <dt id="two-ddheader" class="upperdd" onmouseover="ddMenu('two',1)" onmouseout="ddMenu('two',-1)">Flag Holders/Mounts</dt>
 
-            
+              <dd id="two-ddcontent" onmouseover="cancelHide('two')" onmouseout="ddMenu('two',-1)">
 
-          </dl>
+                <ul>
 
-		  <dl class="dropdown">
+                  <li><a href="flagHolders.html" class="underline">ATV Holders</a></li>
 
-            <dt id="four-ddheader" class="upperdd" onclick="window.location.href='http://www.wheelerwhip.com'">Home</dt>
+                  <li><a href="motorcycleFlagHolders.html" class="underline">Motorcycle Holders</a></li>
 
-          
+                  <li><a href="rhinoRanger.html" class="underline">UTV Holders</a></li>
 
-          </dl>
+                  <li><a href="bicycleHolders.html" class="underline">Bicycle Holders</a></li>
 
-		  <dl class="dropdown">
+                  <li><a href="barGripper.html" class="underline">Bar Gripper</a></li>
 
-            <dt id="five-ddheader" class="upperdd" onmouseover="ddMenu('five',1)" onmouseout="ddMenu('five',-1)">Contact US</dt>
+                </ul>
 
-            <dd id="five-ddcontent" onmouseover="cancelHide('five')" onmouseout="ddMenu('five',-1)">
+              </dd>
 
-              <ul>
+            </dl>
 
-                <li><a href="http://www.wheelerwhip.com/contactUs.html" class="underline">Contact Us</a></li>
 
-                <li><a href="http://www.wheelerwhip.com/dealerContactUs.html" class="underline">Dealer Contact Us</a></li>
 
-              </ul>
+            <dl class="dropdown">
 
-            </dd>
+              <dt id="four-ddheader" class="upperdd" onclick="window.location.href='orderOnline.html'">Order Online</dt>
 
-          </dl>
 
-        </div>
 
-      </div></td>
-    <td width="600px">
-<table width="800" border="0"  align="center" class="">
-  <tr>
-    <td colspan="2"><img src="images/wheelerwhip.jpg" alt="Wheelerwhip.com" width="800" height="120" /></td>
-  </tr>
-  <tr>
-    <td></td>
-  </tr>
-  <tr>
-    <td width="100%" class="textPeripheralTitleMajor colorRed">3' x 5' Specialty Flags</td>
-  </tr>
-  <tr>  
-	<td width="679" class="textPeripheralTitleMinor colorWhite">Designs Available:</td>
-  </tr>
-  
-  <tr>
-    <td class=" colorWhite" >
-	<table width="650" border="0" cellspacing="0" cellpadding="0">
-      <tr align="center">
-        <td class="borderFull borderColorDarkGrey textHeadingLargeAllCaps"width="130">$100.00 Bill<img src="images/3x5Flags/hundredBill.jpg" alt="Red Beer Mug Whip Flag"width="130" height="88" /></td>
-        <td class="borderFull borderColorDarkGrey textHeadingLargeAllCaps"width="130">All Gave<img src="images/3x5Flags/allGaveSome.jpg" alt="Brothren Flag" width="130" height="88" /></td>
-        <td class="borderFull borderColorDarkGrey textHeadingLargeAllCaps"width="130">American<img src="images/3x5Flags/american.jpg" alt="America Whip Flag"width="130" height="88" /></td>
-        <td class="borderFull borderColorDarkGrey textHeadingLargeAllCaps"width="130">Arizona<img src="images/3x5Flags/arizona.jpg" alt="Arizona State Whip Flag"width="130" height="88" /></td>
-        <td class="borderFull borderColorDarkGrey textHeadingLargeAllCaps"width="130">blue beer <img src="images/3x5Flags/blueBeer.jpg" alt="Blue Beer Mug Whip Flag"width="130" height="88" /></td>
-      </tr>
-      <tr align="center">
-        <td class="borderFull borderColorDarkGrey textHeadingLargeAllCaps"width="130">Brethren<img src="images/3x5Flags/brotherenOfTheCoast.jpg" alt="All Gave Some Some Gave All Flag" width="130" height="88" /></td>
-        <td class="borderFull borderColorDarkGrey textHeadingLargeAllCaps"width="130">women  history<img src="images/3x5Flags/womenHistory.jpg" alt="Women in history Whip Flag"width="130" height="88" /></td>
-        <td class="borderFull borderColorDarkGrey textHeadingLargeAllCaps"width="130">black check<img src="images/3x5Flags/blackCheck.jpg" alt="Black Checkered Whip Flag"width="130" height="88" /> </td>
-        <td class="borderFull borderColorDarkGrey textHeadingLargeAllCaps"width="130">red check<img src="images/3x5Flags/redCheck.jpg" alt="Red Checkered Whip Flag"width="130" height="88" /></td>
-        <td class="borderFull borderColorDarkGrey textHeadingLargeAllCaps"width="130">ChevY Flame<img src="images/3x5Flags/ChevyRacing.jpg" alt="Red Checkered Whip Flag"width="130" height="88" /></td>
-      </tr>
-      <tr align="center">
-        <td class="borderFull borderColorDarkGrey textHeadingLargeAllCaps"width="130">Chevy Racing<img src="images/3x5Flags/chevRacing1.jpg" alt="Chevrolet Racing Whip Flag"width="130" height="88" /></td>
-        <td class="borderFull borderColorDarkGrey textHeadingLargeAllCaps"width="130">Dodge Racing<img src="images/3x5Flags/dodgeRacing.jpg" alt="Dodge Racing Whip Flag"width="130" height="88" /></td>
-        <td class="borderFull borderColorDarkGrey textHeadingLargeAllCaps"width="130">fire fighters <img src="images/3x5Flags/fireDepo.jpg" alt="Fire Fighters Whip Flag"width="130" height="88" /></td>
-        <td class="borderFull borderColorDarkGrey textHeadingLargeAllCaps"width="130">ford racing <img src="images/3x5Flags/fordRacing.jpg" alt="Princess Whip Flag"width="130" height="88" /></td>
-        <td class="borderFull borderColorDarkGrey textHeadingLargeAllCaps"width="130">Harley<img src="images/3x5Flags/HarleyDavidson.jpg" alt="Brothren Flag" width="130" height="88" /></td>
-      </tr>
-	  
-	  
-      <tr align="center">
-        <td class="borderFull borderColorDarkGrey textHeadingLargeAllCaps"width="130">Mexican<img src="images/3x5Flags/mexican.jpg" alt="Mexican Flag Whip Flag"width="130" height="88" /></td>
-        <td class="borderFull borderColorDarkGrey textHeadingLargeAllCaps"width="130">Nascar<img src="images/3x5Flags/nascar.jpg" alt="Chevrolet Flames Racing Flag" width="130" height="88" /></td>
-        <td class="borderFull borderColorDarkGrey textHeadingLargeAllCaps"width="130">Rebel<img src="images/3x5Flags/rebal.jpg" alt="Rebal Whip Flag"width="130" height="88" /></td>
-        <td class="borderFull borderColorDarkGrey textHeadingLargeAllCaps"width="130">rebel skull <img src="images/3x5Flags/rebelPirate.jpg" alt="Yellow Checkered Whip Flag"width="130" height="88" /></td>
-        <td class="borderFull borderColorDarkGrey textHeadingLargeAllCaps"width="130">Red Eye Skull<img src="images/3x5Flags/redEyeSkull.jpg" alt="Red Eye Skull Whip Flag"width="130" height="88" /></span></td>
-      </tr>
-      <tr align="center">
-        <td class="borderFull borderColorDarkGrey textHeadingLargeAllCaps"><span class="style25">Skull &amp; Bones<img src="images/3x5Flags/skullAndBones.png" alt="Brothren Flag" width="130" height="88" /></span></td>
-        <td class="borderFull borderColorDarkGrey textHeadingLargeAllCaps"width="130"><span class="style25">Smiley Face</span><img src="images/3x5Flags/smiley.jpg" alt="smiley Whip Flag" width="130" height="88" /></td>
-        <td class="borderFull borderColorDarkGrey textHeadingLargeAllCaps"width="130"> booty <img src="images/3x5Flags/surrenderTheBooty.jpg" alt="Surrender The Booty Whip Flag"width="130" height="88" /></td>
-        <td class="borderFull borderColorDarkGrey textHeadingLargeAllCaps"width="130">Bar is open<img src="images/3x5Flags/barIsOpen.jpg" alt="Brothren Flag" width="130" height="88" /> </td>
-        <td class="borderFull borderColorDarkGrey textHeadingLargeAllCaps"width="130"><span class="style25">Time Flies <img src="images/3x5Flags/timeFlies.jpg" alt="Brothren Flag" width="130" height="88" /></span></td>
-      </tr>
-	  
-	  
-	        <tr align="center">
-        <td class="borderFull borderColorDarkGrey textHeadingLargeAllCaps"width="130">&nbsp;</td>
-        <td class="borderFull borderColorDarkGrey textHeadingLargeAllCaps"width="130"><span class="style25">White Skull</span><img src="images/3x5Flags/redEyeSkull.jpg" alt="Red Eye Skull Whip Flag"width="130" height="88" /></td>
-        <td class="borderFull borderColorDarkGrey textHeadingLargeAllCaps"width="130">&nbsp;</td>
-        <td class="borderFull borderColorDarkGrey textHeadingLargeAllCaps"width="130">jack rackham <img src="images/3x5Flags/jackRackham.jpg" alt="Princess Whip Flag"width="130" height="88" /></td>
-        <td class="borderFull borderColorDarkGrey textHeadingLargeAllCaps"width="130">&nbsp;</td>
-      </tr>
+            </dl>
 
-	  </table>
-<table width="100%" border="0">
-  <tr>
-    <td><table width="660" cellspacing="0" cellpadding="0">
-              <tr>
-                <td width="320" align="center" class="textHeadingLargeAllCaps colorWhite  borderColorDarkGrey"><table width="320" cellspacing="0" cellpadding="0">
-                    <tr>
-                      <td width="160" align="right" valign="top" style="margin-top:4px"class="textHeadingLargeAllCaps colorWhite  borderColorDarkGrey"><p>Flag Design:<br />
-                          <br />
-                          Bolt?</p></td>
-                      <td width="160" align="center" class="textHeadingLargeAllCaps colorWhite  borderColorDarkGrey"><p align="right">
-                          <select name="5-1" id="5-1id" style="width:150px;font:9px;margin-top:4px">
-			                <option value="100 bill">100 bill</option>
-                            <option value="All Gave">All Gave</option>
-                            <option value="American">American</option>
-                            <option value="Arizona">Arizona</option>
-                            <option value="Blue Beer">Blue Beer</option>
-                            <option value="Brethren">Brethren</option>
-                            <option value="Women History">Women History</option>
-                            <option value="Black Check">Black Check</option>
-                            <option value="Red Check">Red Check</option>
-                            <option value="Jack Rackam">Jack Rackam</option>
-                            <option value="Mexican">Mexican</option>
-                            <option value="White Skull">White Skull</option>
-                            <option value="Rebel">Rebel</option>
-                            <option value="Rebel Skull">Rebel Skull</option>
-                            <option value="Red Eye Skull">Red Eye Skull</option>
-                            <option value="Skull & Bones">Skull & Bones</option>
-                            <option value="Smiley Face">Smiley Face</option>
-                            <option value="Booty">Booty</option>
-                            <option value="Bar is Open">Bar is Open</option>
-                            <option value="Time Flies">Time Flies</option>
-                          </select>
-                          
-                         <select style="width: 150px; margin-top: 4px;" id="5-2id" name="5-2">
-			      			<option value="6ft pole with a bolt" amount="29.00">6ft pole with a bolt $29.00</option>
-			   			 </select>
-                                                   <br />
-                          <input name="5" value="Add to Cart" item="3x5 Specialty Flag" type="button" align="middle" style="cursor:pointer; border: 1px solid rgb(204, 204, 204); margin-top: 8px; font-size: 12px; height: 20px; width: 80px;" class="ui-helper-reset ui-state-default ui-corner-all" />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td width="160" align="center" class="textHeadingLargeAllCaps colorWhite  borderColorDarkGrey">&nbsp;</td>
-                      <td width="160" align="center" class="textHeadingLargeAllCaps colorWhite  borderColorDarkGrey">&nbsp;</td>
-                    </tr>
-                  </table></td>
-    <td><td width="320" align="center" class="textHeadingLargeAllCaps colorWhite  borderColorDarkGrey"><table width="320" cellspacing="0" cellpadding="0">
-                    <tr>
-                      <td width="160" align="right" valign="top" style="margin-top:4px"class="textHeadingLargeAllCaps colorWhite  borderColorDarkGrey"><p>Replacement Flag Only $10.00<br />
-                        </p></td>
-                      <td width="160" align="center" class="textHeadingLargeAllCaps colorWhite  borderColorDarkGrey"><p align="right">
-                          <select name="5-4" id="5-4id" style="width:150px;font:9px;margin-top:4px">
-  		                    <option value="Red Beer Mug">Red Beer Mug</option>
-                            <option value="100 bill">100 bill</option>
-                            <option value="All Gave">All Gave</option>
-                            <option value="American">American</option>
-                            <option value="Arizona">Arizona</option>
-                            <option value="Blue Beer">Blue Beer</option>
-                            <option value="Brethren">Brethren</option>
-                            <option value="Women History">Women History</option>
-                            <option value="Black Check">Black Check</option>
-                            <option value="Red Check">Red Check</option>
-                            <option value="Jack Rackam">Jack Rackam</option>
-                            <option value="Mexican">Mexican</option>
-                            <option value="White Skull">White Skull</option>
-                            <option value="Rebel">Rebel</option>
-                            <option value="Rebel Skull">Rebel Skull</option>
-                            <option value="Red Eye Skull">Red Eye Skull</option>
-                            <option value="Skull & Bones">Skull & Bones</option>
-                            <option value="Smiley Face">Smiley Face</option>
-                            <option value="Booty">Booty</option>
-                            <option value="Bar is Open">Bar is Open</option>
-                            <option value="Time Flies">Time Flies</option>
-                          </select>
-                                                    <br />
-                          <input name="5flag" value="Add to Cart" item="3x5 Specialty Flag Replacement" type="button" align="middle" style="cursor:pointer; border: 1px solid rgb(204, 204, 204); margin-top: 8px; font-size: 12px; height: 20px; width: 80px;" class="ui-helper-reset ui-state-default ui-corner-all" />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td width="160" align="center" class="textHeadingLargeAllCaps colorWhite  borderColorDarkGrey">&nbsp;</td>
-                      <td width="160" align="center" class="textHeadingLargeAllCaps colorWhite  borderColorDarkGrey">&nbsp;</td>
-                    </tr>
-                  </table>
-  </tr>
-</table>
+            <dl class="dropdown">
+
+              <dt id="four-ddheader" class="upperdd" onclick="window.location.href='http://www.wheelerwhip.com'">Home</dt>
+
+
+
+            </dl>
+
+            <dl class="dropdown">
+
+              <dt id="five-ddheader" class="upperdd" onmouseover="ddMenu('five',1)" onmouseout="ddMenu('five',-1)">Contact US</dt>
+
+              <dd id="five-ddcontent" onmouseover="cancelHide('five')" onmouseout="ddMenu('five',-1)">
+
+                <ul>
+
+                  <li><a href="contactUs.html" class="underline">Contact Us</a></li>
+
+                  <li><a href="dealerContactUs.html" class="underline">Dealer Contact Us</a></li>
+
+                </ul>
+
+              </dd>
+
+            </dl>
+
+          </div>
+
+        </div></td>
+      <td width="600px">
+  <table width="800" border="0"  align="center" class="catalogTable">
+    <tr>
+      <td colspan="2"><img src="images/wheelerwhip.jpg" alt="Wheelerwhip.com" width="800" height="120" /></td>
+    </tr>
+    <tr>
+      <td></td>
+    </tr>
+    <tr>
+      <td width="100%" class="textPeripheralTitleMajor colorRed">3' x 5' Specialty Flags</td>
+    </tr>
+    <tr>
+      <td width="679" class="textPeripheralTitleMinor colorWhite">Designs Available:</td>
+    </tr>
 
     <tr>
-    
-    
-    
-    <td class="colorWhite textHeadingLarge"><b>Our Specialty Flags come in a variety of colors and styles. These are great for customizing your off road vehicle or for distinguishing your party from others when you are out riding. Helps riders to distinguish the location of their camps or RV's.<br><br>
-        <ul>
-        <li>Works great on RV's, Dune Buggies, and Side by Sides.</li>
-        <li>Increases rider visibility. </li>
-        <li>Sewn completely around the edge for durability.</li>
-        <li>Flags are sold individualy or with a pole.(Pole comes with 1/2 mounting bolt)</li>
-        <li>Flags have eyelets in the corners for mounting.</li>
-      </ul></b>    </td>
-  </tr>
-  <tr>
-    <td align="center" class="textHeadingLargeAllCaps borderFull borderColorDarkGrey colorLightGrey">
-	All Rights Reserved Wheelerwhip.com<br>
-	Email Contact@wheelerwhip.com<br />
-      Phone (801)785-4710<br> 
-    Fax (801)785-5687<br></td>
- </tr>
-  
-  
-    </table>
-    </table>
-    </td>
-  </tr>
-</table>
-<div id="accordion" style="width:320px;  opacity:0.8; filter:alpha(opacity=80)" class="">
-	<h3><a>Shopping Cart(click here to minimize)</a></h3>
-	<div>
-      <div id="cartContents">
-        <table width="265" border="0" style=" font-size:11px">
-          <tr>
-            <td width="185" align="center" class="ui-widget-header">ITEM</td>
-            <td width="" align="center" class="ui-widget-header">QTY</td>
-            <td width="" align="center" class="ui-widget-header">PRICE</td>
-          </tr>
-          <tr>
-            <td width="175" align="left">CART IS EMPTY</td>
-            <td width="25" align="right"></td>
-            <td width="" align="right"></td>
-          </tr>
+      <td class=" colorWhite" >
+      <table width="650" border="0" cellspacing="0" cellpadding="0">
+        <tr align="center">
+          <td class="borderFull borderColorDarkGrey textHeadingLargeAllCaps"width="130">$100.00 Bill<img src="images/3x5Flags/hundredBill.jpg" alt="Red Beer Mug Whip Flag"width="130" height="88" /></td>
+          <td class="borderFull borderColorDarkGrey textHeadingLargeAllCaps"width="130">All Gave<img src="images/3x5Flags/allGaveSome.jpg" alt="Brothren Flag" width="130" height="88" /></td>
+          <td class="borderFull borderColorDarkGrey textHeadingLargeAllCaps"width="130">American<img src="images/3x5Flags/american.jpg" alt="America Whip Flag"width="130" height="88" /></td>
+          <td class="borderFull borderColorDarkGrey textHeadingLargeAllCaps"width="130">Arizona<img src="images/3x5Flags/arizona.jpg" alt="Arizona State Whip Flag"width="130" height="88" /></td>
+          <td class="borderFull borderColorDarkGrey textHeadingLargeAllCaps"width="130">blue beer <img src="images/3x5Flags/blueBeer.jpg" alt="Blue Beer Mug Whip Flag"width="130" height="88" /></td>
+        </tr>
+        <tr align="center">
+          <td class="borderFull borderColorDarkGrey textHeadingLargeAllCaps"width="130">Brethren<img src="images/3x5Flags/brotherenOfTheCoast.jpg" alt="All Gave Some Some Gave All Flag" width="130" height="88" /></td>
+          <td class="borderFull borderColorDarkGrey textHeadingLargeAllCaps"width="130">women  history<img src="images/3x5Flags/womenHistory.jpg" alt="Women in history Whip Flag"width="130" height="88" /></td>
+          <td class="borderFull borderColorDarkGrey textHeadingLargeAllCaps"width="130">black check<img src="images/3x5Flags/blackCheck.jpg" alt="Black Checkered Whip Flag"width="130" height="88" /> </td>
+          <td class="borderFull borderColorDarkGrey textHeadingLargeAllCaps"width="130">red check<img src="images/3x5Flags/redCheck.jpg" alt="Red Checkered Whip Flag"width="130" height="88" /></td>
+          <td class="borderFull borderColorDarkGrey textHeadingLargeAllCaps"width="130">ChevY Flame<img src="images/3x5Flags/ChevyRacing.jpg" alt="Red Checkered Whip Flag"width="130" height="88" /></td>
+        </tr>
+        <tr align="center">
+          <td class="borderFull borderColorDarkGrey textHeadingLargeAllCaps"width="130">Chevy Racing<img src="images/3x5Flags/chevRacing1.jpg" alt="Chevrolet Racing Whip Flag"width="130" height="88" /></td>
+          <td class="borderFull borderColorDarkGrey textHeadingLargeAllCaps"width="130">Dodge Racing<img src="images/3x5Flags/dodgeRacing.jpg" alt="Dodge Racing Whip Flag"width="130" height="88" /></td>
+          <td class="borderFull borderColorDarkGrey textHeadingLargeAllCaps"width="130">fire fighters <img src="images/3x5Flags/fireDepo.jpg" alt="Fire Fighters Whip Flag"width="130" height="88" /></td>
+          <td class="borderFull borderColorDarkGrey textHeadingLargeAllCaps"width="130">ford racing <img src="images/3x5Flags/fordRacing.jpg" alt="Princess Whip Flag"width="130" height="88" /></td>
+          <td class="borderFull borderColorDarkGrey textHeadingLargeAllCaps"width="130">Harley<img src="images/3x5Flags/HarleyDavidson.jpg" alt="Brothren Flag" width="130" height="88" /></td>
+        </tr>
+
+
+        <tr align="center">
+          <td class="borderFull borderColorDarkGrey textHeadingLargeAllCaps"width="130">Mexican<img src="images/3x5Flags/mexican.jpg" alt="Mexican Flag Whip Flag"width="130" height="88" /></td>
+          <td class="borderFull borderColorDarkGrey textHeadingLargeAllCaps"width="130">Nascar<img src="images/3x5Flags/nascar.jpg" alt="Chevrolet Flames Racing Flag" width="130" height="88" /></td>
+          <td class="borderFull borderColorDarkGrey textHeadingLargeAllCaps"width="130">Rebel<img src="images/3x5Flags/rebal.jpg" alt="Rebal Whip Flag"width="130" height="88" /></td>
+          <td class="borderFull borderColorDarkGrey textHeadingLargeAllCaps"width="130">rebel skull <img src="images/3x5Flags/rebelPirate.jpg" alt="Yellow Checkered Whip Flag"width="130" height="88" /></td>
+          <td class="borderFull borderColorDarkGrey textHeadingLargeAllCaps"width="130">Red Eye Skull<img src="images/3x5Flags/redEyeSkull.jpg" alt="Red Eye Skull Whip Flag"width="130" height="88" /></span></td>
+        </tr>
+        <tr align="center">
+          <td class="borderFull borderColorDarkGrey textHeadingLargeAllCaps"><span class="style25">Skull &amp; Bones<img src="images/3x5Flags/skullAndBones.png" alt="Brothren Flag" width="130" height="88" /></span></td>
+          <td class="borderFull borderColorDarkGrey textHeadingLargeAllCaps"width="130"><span class="style25">Smiley Face</span><img src="images/3x5Flags/smiley.jpg" alt="smiley Whip Flag" width="130" height="88" /></td>
+          <td class="borderFull borderColorDarkGrey textHeadingLargeAllCaps"width="130"> booty <img src="images/3x5Flags/surrenderTheBooty.jpg" alt="Surrender The Booty Whip Flag"width="130" height="88" /></td>
+          <td class="borderFull borderColorDarkGrey textHeadingLargeAllCaps"width="130">Bar is open<img src="images/3x5Flags/barIsOpen.jpg" alt="Brothren Flag" width="130" height="88" /> </td>
+          <td class="borderFull borderColorDarkGrey textHeadingLargeAllCaps"width="130"><span class="style25">Time Flies <img src="images/3x5Flags/timeFlies.jpg" alt="Brothren Flag" width="130" height="88" /></span></td>
+        </tr>
+
+
+              <tr align="center">
+          <td class="borderFull borderColorDarkGrey textHeadingLargeAllCaps"width="130">&nbsp;</td>
+          <td class="borderFull borderColorDarkGrey textHeadingLargeAllCaps"width="130"><span class="style25">White Skull</span><img src="images/3x5Flags/redEyeSkull.jpg" alt="Red Eye Skull Whip Flag"width="130" height="88" /></td>
+          <td class="borderFull borderColorDarkGrey textHeadingLargeAllCaps"width="130">&nbsp;</td>
+          <td class="borderFull borderColorDarkGrey textHeadingLargeAllCaps"width="130">jack rackham <img src="images/3x5Flags/jackRackham.jpg" alt="Princess Whip Flag"width="130" height="88" /></td>
+          <td class="borderFull borderColorDarkGrey textHeadingLargeAllCaps"width="130">&nbsp;</td>
+        </tr>
+
         </table>
-        </div>
-<div id="testdiv"></div>
-        <div id="copycart">
-          <form id="testForm" method="post" action="https://www.paypal.com/cgi-bin/webscr">
-          <input type="hidden" name="currency_code" value="USD" />
-          <input type="hidden" name="upload" value="1" />
-          <input type="hidden" name="cmd" value="_cart" />
-          <input type="hidden" name="business" value="contact@wheelerwhip.com" />
-          <input type="button" name="checkout" value="Checkout" style=" cursor:pointer; border: 1px solid rgb(204, 204, 204); margin-top: 8px; font-size: 12px; height: 20px; width: 100px;" class="ui-helper-reset ui-state-default ui-corner-all"/><input name="editCart" value="Edit Cart" type="button" align="middle" style="cursor:pointer; border: 1px solid rgb(204, 204, 204); margin-top: 8px; font-size: 12px; height: 20px; width: 80px;" class="ui-helper-reset ui-state-default ui-corner-all" />
-          <input type="hidden" name="amount_1" value="10" />
-          </form>
+  <table width="100%" border="0">
+    <tr>
+      <td><table width="660" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td width="320" align="center" class="textHeadingLargeAllCaps colorWhite  borderColorDarkGrey"><table width="320" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td width="160" align="right" valign="top" style="margin-top:4px"class="textHeadingLargeAllCaps colorWhite  borderColorDarkGrey"><p>Flag Design:<br />
+                            <br />
+                            Bolt?</p></td>
+                        <td width="160" align="center" class="textHeadingLargeAllCaps colorWhite  borderColorDarkGrey"><p align="right">
+                            <select name="5-1" id="5-1id" style="width:150px;font:9px;margin-top:4px">
+                              <option value="100 bill">100 bill</option>
+                              <option value="All Gave">All Gave</option>
+                              <option value="American">American</option>
+                              <option value="Arizona">Arizona</option>
+                              <option value="Blue Beer">Blue Beer</option>
+                              <option value="Brethren">Brethren</option>
+                              <option value="Women History">Women History</option>
+                              <option value="Black Check">Black Check</option>
+                              <option value="Red Check">Red Check</option>
+                              <option value="Jack Rackam">Jack Rackam</option>
+                              <option value="Mexican">Mexican</option>
+                              <option value="White Skull">White Skull</option>
+                              <option value="Rebel">Rebel</option>
+                              <option value="Rebel Skull">Rebel Skull</option>
+                              <option value="Red Eye Skull">Red Eye Skull</option>
+                              <option value="Skull & Bones">Skull & Bones</option>
+                              <option value="Smiley Face">Smiley Face</option>
+                              <option value="Booty">Booty</option>
+                              <option value="Bar is Open">Bar is Open</option>
+                              <option value="Time Flies">Time Flies</option>
+                            </select>
+
+                           <select style="width: 150px; margin-top: 4px;" id="5-2id" name="5-2">
+                              <option value="6ft pole with a bolt" amount="29.00">6ft pole with a bolt $29.00</option>
+                           </select>
+                                                     <br />
+                            <input name="5" value="Add to Cart" item="3x5 Specialty Flag" type="button" align="middle" style="cursor:pointer; border: 1px solid rgb(204, 204, 204); margin-top: 8px; font-size: 12px; height: 20px; width: 80px;" class="ui-helper-reset ui-state-default ui-corner-all" />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td width="160" align="center" class="textHeadingLargeAllCaps colorWhite  borderColorDarkGrey">&nbsp;</td>
+                        <td width="160" align="center" class="textHeadingLargeAllCaps colorWhite  borderColorDarkGrey">&nbsp;</td>
+                      </tr>
+                    </table></td>
+      <td><td width="320" align="center" class="textHeadingLargeAllCaps colorWhite  borderColorDarkGrey"><table width="320" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td width="160" align="right" valign="top" style="margin-top:4px"class="textHeadingLargeAllCaps colorWhite  borderColorDarkGrey"><p>Replacement Flag Only $10.00<br />
+                          </p></td>
+                        <td width="160" align="center" class="textHeadingLargeAllCaps colorWhite  borderColorDarkGrey"><p align="right">
+                            <select name="5-4" id="5-4id" style="width:150px;font:9px;margin-top:4px">
+                              <option value="Red Beer Mug">Red Beer Mug</option>
+                              <option value="100 bill">100 bill</option>
+                              <option value="All Gave">All Gave</option>
+                              <option value="American">American</option>
+                              <option value="Arizona">Arizona</option>
+                              <option value="Blue Beer">Blue Beer</option>
+                              <option value="Brethren">Brethren</option>
+                              <option value="Women History">Women History</option>
+                              <option value="Black Check">Black Check</option>
+                              <option value="Red Check">Red Check</option>
+                              <option value="Jack Rackam">Jack Rackam</option>
+                              <option value="Mexican">Mexican</option>
+                              <option value="White Skull">White Skull</option>
+                              <option value="Rebel">Rebel</option>
+                              <option value="Rebel Skull">Rebel Skull</option>
+                              <option value="Red Eye Skull">Red Eye Skull</option>
+                              <option value="Skull & Bones">Skull & Bones</option>
+                              <option value="Smiley Face">Smiley Face</option>
+                              <option value="Booty">Booty</option>
+                              <option value="Bar is Open">Bar is Open</option>
+                              <option value="Time Flies">Time Flies</option>
+                            </select>
+                                                      <br />
+                            <input name="5flag" value="Add to Cart" item="3x5 Specialty Flag Replacement" type="button" align="middle" style="cursor:pointer; border: 1px solid rgb(204, 204, 204); margin-top: 8px; font-size: 12px; height: 20px; width: 80px;" class="ui-helper-reset ui-state-default ui-corner-all" />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td width="160" align="center" class="textHeadingLargeAllCaps colorWhite  borderColorDarkGrey">&nbsp;</td>
+                        <td width="160" align="center" class="textHeadingLargeAllCaps colorWhite  borderColorDarkGrey">&nbsp;</td>
+                      </tr>
+                    </table>
+    </tr>
+  </table>
+
+      <tr>
+
+
+
+      <td class="colorWhite textHeadingLarge"><b>Our Specialty Flags come in a variety of colors and styles. These are great for customizing your off road vehicle or for distinguishing your party from others when you are out riding. Helps riders to distinguish the location of their camps or RV's.<br><br>
+          <ul>
+          <li>Works great on RV's, Dune Buggies, and Side by Sides.</li>
+          <li>Increases rider visibility. </li>
+          <li>Sewn completely around the edge for durability.</li>
+          <li>Flags are sold individualy or with a pole.(Pole comes with 1/2 mounting bolt)</li>
+          <li>Flags have eyelets in the corners for mounting.</li>
+        </ul></b>    </td>
+    </tr>
+
+      </table>
+      </table>
+      </td>
+    </tr>
+  </table>
+
+  <div w3-include-html="productfooter.html"></div>
+
+  <script>
+    w3IncludeHTML();
+  </script>
+
+  <div id="accordion" style="width:320px;  opacity:0.8; filter:alpha(opacity=80)" class="">
+      <h3><a>Shopping Cart(click here to minimize)</a></h3>
+      <div>
+        <div id="cartContents">
+          <table width="265" border="0" style=" font-size:11px">
+            <tr>
+              <td width="185" align="center" class="ui-widget-header">ITEM</td>
+              <td width="" align="center" class="ui-widget-header">QTY</td>
+              <td width="" align="center" class="ui-widget-header">PRICE</td>
+            </tr>
+            <tr>
+              <td width="175" align="left">CART IS EMPTY</td>
+              <td width="25" align="right"></td>
+              <td width="" align="right"></td>
+            </tr>
+          </table>
+          </div>
+  <div id="testdiv"></div>
+          <div id="copycart">
+            <form id="testForm" method="post" action="https://www.paypal.com/cgi-bin/webscr">
+            <input type="hidden" name="currency_code" value="USD" />
+            <input type="hidden" name="upload" value="1" />
+            <input type="hidden" name="cmd" value="_cart" />
+            <input type="hidden" name="business" value="contact@wheelerwhip.com" />
+            <input type="button" name="checkout" value="Checkout" style=" cursor:pointer; border: 1px solid rgb(204, 204, 204); margin-top: 8px; font-size: 12px; height: 20px; width: 100px;" class="ui-helper-reset ui-state-default ui-corner-all"/><input name="editCart" value="Edit Cart" type="button" align="middle" style="cursor:pointer; border: 1px solid rgb(204, 204, 204); margin-top: 8px; font-size: 12px; height: 20px; width: 80px;" class="ui-helper-reset ui-state-default ui-corner-all" />
+            </form>
+          </div>
         </div>
       </div>
-	</div>
-  </div>
+    </div>
 
 
 
-<div id="dialog" title="CART CONTENTS">
-  <div class="ui-widget" id="loginErrorContainer">
-    <div class="ui-state-default ui-corner-all" style="padding: 0pt 0.7em;"></div>
-    <div class="ui-widget" id="message">MESSAGE GOES HERE<br>
+  <div id="dialog" title="CART CONTENTS">
+    <div class="ui-widget" id="loginErrorContainer">
+      <div class="ui-state-default ui-corner-all" style="padding: 0pt 0.7em;"></div>
+      <div class="ui-widget" id="message">MESSAGE GOES HERE<br>
+      </div>
     </div>
   </div>
-</div>
 
 </body>
 </html>

@@ -20,12 +20,7 @@ jQuery(document).ready(function(){
         'CANCEL': function() { $('#dialog').dialog('close');}
         },
     });
-
-
-
-
-
-	  var top = $('#accordion').offset().top - parseFloat($('#accordion').css('marginTop').replace(/auto/, 0));
+  var top = $('#accordion').offset().top - parseFloat($('#accordion').css('marginTop').replace(/auto/, 0));
   $(window).scroll(function (event) {
     // what the y position of the scroll is
     var y = $(this).scrollTop();
@@ -94,7 +89,7 @@ jQuery(document).ready(function(){
     addItemToCartObject(newItem);		
   });
     $('input[name="5flag"]').click(function() {
-	var productDescription =$('#4-3id').val();
+	var productDescription =$('#5-4id').val();
     var newItem = {"name":"Replacement 3ft x 5ft Specialty Flag","description":productDescription,"QTY":"1","amount":"10.00"};
     addItemToCartObject(newItem);	
   });	  

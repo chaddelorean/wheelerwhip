@@ -104,7 +104,7 @@ jQuery(document).ready(function(){
     addItemToCartObject(newItem);	
   });	
     $('input[name="7"]').click(function() {
-    var productDescription = "Color: " + $('#7-2id').val() + " Fits " + $('#7-1id').val() +"in Flags";
+    var productDescription = "Color: " + $('#7-2id').val() + " Fits " + $('#7-1id').val() +" inch pole";
     var newItem = {"name":"Original Flag Holder","description":productDescription,"QTY":"1","amount":$("#7-2id option:selected").attr('amount')};
     addItemToCartObject(newItem);	
   });

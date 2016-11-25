@@ -129,7 +129,7 @@ jQuery(document).ready(function(){
     addItemToCartObject(newItem);		
   });
     $('input[name="12"]').click(function() {
-	var productDescription =$('#12-1id').val();
+	var productDescription =$('#12-1id').val() +" "+ $('#12-2id').val() + " in";
     var newItem = {"name":"UTV Flag Holder","description":productDescription,"QTY":"1","amount":"28.00"};
     addItemToCartObject(newItem);	
   });

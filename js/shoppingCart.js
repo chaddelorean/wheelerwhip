@@ -123,6 +123,11 @@ jQuery(document).ready(function(){
     var newItem = {"name":"Bolt-On Flag Holder","description":productDescription,"QTY":"1","amount":"22.50"};
     addItemToCartObject(newItem);	
   });
+    $('input[name="AddAngleBracket"]').click(function() {
+        var productDescription = "Only available in Silver";  
+        var newItem = {"name":"Angle Bracket","description":productDescription,"QTY":"1","amount":"22.50"};
+        addItemToCartObject(newItem);	
+  });
     $('input[name="11"]').click(function() {
 	var productDescription =$('#11-1id').val();
     var newItem = {"name":"Springy Thingy Flag Holder","description":productDescription,"QTY":"1","amount":"22.50"};

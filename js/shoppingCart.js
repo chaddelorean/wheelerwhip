@@ -148,6 +148,12 @@ jQuery(document).ready(function(){
     var newItem = {"name":"Bar Gripper","description":productDescription,"QTY":"1","amount":"16.00"};
     addItemToCartObject(newItem);	
   });
+    $('input[name="16"]').click(function() {
+        var productDescription = "";
+        //TODO: Need to find out angle bracket price
+        var newItem = {"name":"Angle Bracket","description":productDescription,"QTY":"1","amount":"10.00"};
+        addItemToCartObject(newItem);
+    });
 
 
 

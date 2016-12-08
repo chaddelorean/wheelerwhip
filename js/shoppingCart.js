@@ -104,9 +104,15 @@ jQuery(document).ready(function(){
     addItemToCartObject(newItem);	
   });	
     $('input[name="7"]').click(function() {
-    var productDescription = "Color: " + $('#7-2id').val() + " Fits " + $('#7-1id').val() +" inch pole";
-    var newItem = {"name":"Original Flag Holder","description":productDescription,"QTY":"1","amount":$("#7-2id option:selected").attr('amount')};
-    addItemToCartObject(newItem);	
+        var poleSize = $("#7-1id").val();
+        var poleSKU = poleSize.split(" ")[0];
+        var poleDiameter = poleSize.split(" ")[1];
+        var colorValue = $('#7-2id').val();
+        var color = colorValue.split(" ")[0];
+        var value = colorValue.split(" ")[1];
+        var productDescription = "Color: " + color + " " + poleSKU.replace("{value}", value) + " Fits " + poleDiameter +" inch pole";
+        var newItem = {"name":"Original Flag Holder","description":productDescription,"QTY":"1","amount":$("#7-2id option:selected").attr('amount')};
+        addItemToCartObject(newItem);
   });
     $('input[name="8"]').click(function() {
 	var productDescription =$('#8-1id').val()+ " Fits 1/4in Flags";
@@ -156,7 +162,7 @@ jQuery(document).ready(function(){
     $('input[name="16"]').click(function() {
         var productDescription = "";
         //TODO: Need to find out angle bracket price
-        var newItem = {"name":"Angle Bracket","description":productDescription,"QTY":"1","amount":"10.00"};
+        var newItem = {"name":"Angle Bracket","description":productDescription,"QTY":"1","amount":"8.00"};
         addItemToCartObject(newItem);
     });
 

@@ -202,6 +202,8 @@ These are the allowable colors for the style sheet*/
   font-weight : bold;
   letter-spacing : -1px;
   line-height : -50px;
+    width: 334px!important;
+
 }
 
 .textPeripheralTitleMinor{

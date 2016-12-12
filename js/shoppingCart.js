@@ -20,12 +20,7 @@ jQuery(document).ready(function(){
         'CANCEL': function() { $('#dialog').dialog('close');}
         },
     });
-
-
-
-
-
-	  var top = $('#accordion').offset().top - parseFloat($('#accordion').css('marginTop').replace(/auto/, 0));
+  var top = $('#accordion').offset().top - parseFloat($('#accordion').css('marginTop').replace(/auto/, 0));
   $(window).scroll(function (event) {
     // what the y position of the scroll is
     var y = $(this).scrollTop();
@@ -94,7 +89,7 @@ jQuery(document).ready(function(){
     addItemToCartObject(newItem);		
   });
     $('input[name="5flag"]').click(function() {
-	var productDescription =$('#4-3id').val();
+	var productDescription =$('#5-4id').val();
     var newItem = {"name":"Replacement 3ft x 5ft Specialty Flag","description":productDescription,"QTY":"1","amount":"10.00"};
     addItemToCartObject(newItem);	
   });	  
@@ -109,9 +104,15 @@ jQuery(document).ready(function(){
     addItemToCartObject(newItem);	
   });	
     $('input[name="7"]').click(function() {
-    var productDescription = "Color: " + $('#7-2id').val() + " Fits " + $('#7-1id').val() +"in Flags";
-    var newItem = {"name":"Original Flag Holder","description":productDescription,"QTY":"1","amount":$("#7-2id option:selected").attr('amount')};
-    addItemToCartObject(newItem);	
+        var poleSize = $("#7-1id").val();
+        var poleSKU = poleSize.split(" ")[0];
+        var poleDiameter = poleSize.split(" ")[1];
+        var colorValue = $('#7-2id').val();
+        var color = colorValue.split(" ")[0];
+        var value = colorValue.split(" ")[1];
+        var productDescription = "Color: " + color + " " + poleSKU.replace("{value}", value) + " Fits " + poleDiameter +" inch pole";
+        var newItem = {"name":"Original Flag Holder","description":productDescription,"QTY":"1","amount":$("#7-2id option:selected").attr('amount')};
+        addItemToCartObject(newItem);
   });
     $('input[name="8"]').click(function() {
 	var productDescription =$('#8-1id').val()+ " Fits 1/4in Flags";
@@ -128,13 +129,18 @@ jQuery(document).ready(function(){
     var newItem = {"name":"Bolt-On Flag Holder","description":productDescription,"QTY":"1","amount":"22.50"};
     addItemToCartObject(newItem);	
   });
+    $('input[name="AddAngleBracket"]').click(function() {
+        var productDescription = "Only available in Silver";  
+        var newItem = {"name":"Angle Bracket","description":productDescription,"QTY":"1","amount":"22.50"};
+        addItemToCartObject(newItem);	
+  });
     $('input[name="11"]').click(function() {
 	var productDescription =$('#11-1id').val();
     var newItem = {"name":"Springy Thingy Flag Holder","description":productDescription,"QTY":"1","amount":"22.50"};
     addItemToCartObject(newItem);		
   });
     $('input[name="12"]').click(function() {
-	var productDescription =$('#12-1id').val();
+	var productDescription =$('#12-1id').val() +" "+ $('#12-2id').val() + " in";
     var newItem = {"name":"UTV Flag Holder","description":productDescription,"QTY":"1","amount":"28.00"};
     addItemToCartObject(newItem);	
   });
@@ -153,6 +159,12 @@ jQuery(document).ready(function(){
     var newItem = {"name":"Bar Gripper","description":productDescription,"QTY":"1","amount":"16.00"};
     addItemToCartObject(newItem);	
   });
+    $('input[name="16"]').click(function() {
+        var productDescription = "";
+        //TODO: Need to find out angle bracket price
+        var newItem = {"name":"Angle Bracket","description":productDescription,"QTY":"1","amount":"8.00"};
+        addItemToCartObject(newItem);
+    });
 
 
 
